@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NifCmd", "NifCmd_VC80.vcproj", "{3976526D-2906-443B-B716-95E3915A7CBE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E} = {19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NIFlib", "..\..\..\niflib\niflib.vcproj", "{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug - PCH|Win32 = Debug - PCH|Win32
+		Debug|Win32 = Debug|Win32
+		PyNiflib|Win32 = PyNiflib|Win32
+		Release - DLL|Win32 = Release - DLL|Win32
+		Release - PCH|Win32 = Release - PCH|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Debug - PCH|Win32.ActiveCfg = Debug|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Debug - PCH|Win32.Build.0 = Debug|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Debug|Win32.Build.0 = Debug|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.PyNiflib|Win32.ActiveCfg = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.PyNiflib|Win32.Build.0 = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release - DLL|Win32.ActiveCfg = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release - DLL|Win32.Build.0 = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release - PCH|Win32.ActiveCfg = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release - PCH|Win32.Build.0 = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release|Win32.ActiveCfg = Release|Win32
+		{3976526D-2906-443B-B716-95E3915A7CBE}.Release|Win32.Build.0 = Release|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Debug - PCH|Win32.ActiveCfg = Debug - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Debug - PCH|Win32.Build.0 = Debug - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Debug|Win32.ActiveCfg = Debug - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Debug|Win32.Build.0 = Debug - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.PyNiflib|Win32.ActiveCfg = PyNiflib|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.PyNiflib|Win32.Build.0 = PyNiflib|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release - DLL|Win32.ActiveCfg = Release - DLL|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release - DLL|Win32.Build.0 = Release - DLL|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release - PCH|Win32.ActiveCfg = Release - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release - PCH|Win32.Build.0 = Release - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release|Win32.ActiveCfg = Release - PCH|Win32
+		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release|Win32.Build.0 = Release - PCH|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
