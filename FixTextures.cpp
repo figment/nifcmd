@@ -66,14 +66,14 @@ bool FixImages(vector<NiObjectRef>& blocks, NameValueCollection& imgTable)
       NiSourceTextureRef& tex = (*itr);
       if (tex->IsTextureExternal())
       {
-         string fname = tex->GetExternalFileName();
+         string fname = tex->GetTextureFileName();
 
          char buffer[MAX_PATH];
          strcpy(buffer, fname.c_str());
          PathRemoveExtension(buffer);
          NameValueCollection::iterator itr = imgTable.find(buffer);
          if (itr != imgTable.end()){
-            tex->SetExternalTexture((*itr).second, tex->GetExternalUnknownLink());
+            tex->SetExternalTexture((*itr).second);
             rv = true;
          } else {
             for (string::iterator sitr = fname.begin(); sitr != fname.end(); ) {
@@ -87,7 +87,7 @@ bool FixImages(vector<NiObjectRef>& blocks, NameValueCollection& imgTable)
             PathRemoveExtension(buffer);
             NameValueCollection::iterator itr = imgTable.find(buffer);
             if (itr != imgTable.end()){
-               tex->SetExternalTexture((*itr).second, tex->GetExternalUnknownLink());
+               tex->SetExternalTexture((*itr).second);
                rv = true;
             }
          }

@@ -152,11 +152,8 @@ inline T ConvertTo(U value){
    return v;
 }
 
-inline Niflib::NiObjectRef CreateBlock(const char *name) {
-   return Niflib::CreateObject(name);
-}
 
 template<typename T>
 inline Niflib::Ref<T> CreateNiObject() {
-   return Niflib::StaticCast<T>(Niflib::CreateObject(T::TypeConst().GetTypeName()));
+   return Niflib::StaticCast<T>(Ref<T>(new T()));
 }

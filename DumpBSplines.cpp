@@ -16,7 +16,7 @@ static inline float TORAD(float x) { return x * PI / 180.0f; }
 const float FramesPerSecond = 30.0f;
 const float FramesIncrement = 1.0f/30.0f;
 inline bool ISNAN(float f) { 
-   return ((*(uint*)&f) == 0x7f7fffff); 
+   return ((*(unsigned int*)&f) == 0x7f7fffff); 
 }
 
 void DumpBSpline(NiBSplineCompTransformInterpolatorRef spline, string target)
@@ -35,7 +35,7 @@ void DumpBSpline(NiBSplineCompTransformInterpolatorRef spline, string target)
 
    if (dumpControl)
    {
-      vector<short > control = data->GetControlPoints();
+      vector<short > control = data->GetShortControlPoints();
       cout << "Control data for " << target << endl
            << "Control Pt: " << control.size() << endl;
       int j=0;

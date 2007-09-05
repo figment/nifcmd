@@ -7,9 +7,9 @@ using namespace std;
 
 #pragma comment(lib, "shlwapi.lib")
 #ifdef _DEBUG
-#  pragma comment(lib, "niflib_debug.lib")
+#  pragma comment(lib, "niflib_static_debug.lib")
 #else
-#  pragma comment(lib, "niflib.lib")
+#  pragma comment(lib, "niflib_static.lib")
 #endif
 
 using namespace std;
