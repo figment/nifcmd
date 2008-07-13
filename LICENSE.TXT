@@ -31,3 +31,6 @@ NOTICE:
   Parts of NifCmd (ie. included libraries) might be subject to
   other licenses. This license only applies to original NifCmd
   sources.
+
+NifCmd uses Havok®.  ©Copyright 1999-2008 Havok.com Inc. (and its Licensors). 
+  All Rights Reserved.  See www.havok.com for details.
