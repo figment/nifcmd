@@ -203,7 +203,7 @@ static void BuildCollision(NiNodeRef top, vector<bhkRigidBodyRef>& bodies)
 
 				OblivionSubShape subshape;
 				subshape.material = mesh->GetMaterial();
-				if ( i < mesh->GetNumDataLayers() )
+				if ( i < (int)mesh->GetNumDataLayers() )
 					subshape.layer = mesh->GetOblivionLayer( i );
 				else
 					subshape.layer = OL_STATIC;
