@@ -5,6 +5,10 @@
 	Name="NifCmd"
 	ProjectGUID="{3976526D-2906-443B-B716-95E3915A7CBE}"
 	RootNamespace="NifCmd"
+	SccProjectName="Svn"
+	SccAuxPath="Svn"
+	SccLocalPath="Svn"
+	SccProvider="SubversionScc"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
