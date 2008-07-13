@@ -42,8 +42,8 @@
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				WholeProgramOptimization="false"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)..\..\..\niflib\include&quot;;&quot;$(ProjectDir)Loki/include&quot;"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;USE_NIFLIB_TEMPLATE_HELPERS;NIFLIB_STATIC_LINK;_SCL_SECURE_NO_WARNINGS"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)Core&quot;;&quot;$(ProjectDir)..\..\..\niflib\include&quot;;&quot;$(ProjectDir)Loki/include&quot;;&quot;$(ProjectDir)..\..\..\..\Havok\hk550\Source&quot;"
+				PreprocessorDefinitions="WIN32;_WIN32_WINNT=0x500;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;USE_NIFLIB_TEMPLATE_HELPERS;NIFLIB_STATIC_LINK;_SCL_SECURE_NO_WARNINGS"
 				StringPooling="true"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -67,7 +67,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="$(ProjectDir)..\..\..\niflib\lib"
+				AdditionalLibraryDirectories="&quot;$(ProjectDir)..\..\..\niflib\lib&quot;;&quot;$(ProjectDir)..\..\..\..\Havok\hk550\Lib\win32_net_8-0\debug_multithreaded&quot;"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
 				SubSystem="1"
@@ -123,7 +123,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;$(ProjectDir)..\..\..\niflib\include&quot;;&quot;$(ProjectDir)Loki/include&quot;"
+				AdditionalIncludeDirectories="&quot;$(ProjectDir)..\..\..\niflib\include&quot;;&quot;$(ProjectDir)Loki/include&quot;;&quot;$(ProjectDir)..\..\..\..\Havok\hk550\source&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;USE_NIFLIB_TEMPLATE_HELPERS"
 				RuntimeLibrary="0"
 				ForceConformanceInForLoopScope="false"
@@ -143,7 +143,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				LinkIncremental="1"
-				AdditionalLibraryDirectories="$(ProjectDir)..\..\..\niflib\lib"
+				AdditionalLibraryDirectories="&quot;$(ProjectDir)..\..\..\niflib\lib&quot;;&quot;$(ProjectDir)..\..\..\..\Havok\hk550\Lib\win32_net_8-0\release_multithreaded&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 				OptimizeReferences="2"
@@ -185,34 +185,15 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\KFVersion.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\NifCmd.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\NifUtils.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\nifutils.h"
-				>
-			</File>
-			<File
-				RelativePath=".\NormalizeMesh.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\stdafx.cpp"
+				RelativePath=".\Addins\About.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
 					/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -220,12 +201,131 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath=".\TransformMesh.cpp"
+				RelativePath=".\Addins\Chain.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\CullChildren.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\CullNodes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\DumpBSplines.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\FixTextures.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\KFVersion.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\MergeFiles.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Core\NifCmd.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Core\NifUtils.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Addins\Nop.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\NormalizeMesh.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\PrintNiNodes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\SortNiNodes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Core\stdafx.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\Addins\StripNiNodes.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\TransformMesh.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Addins\UnparentNiNodes.cpp"
 				>
 			</File>
 		</Filter>
@@ -331,52 +431,26 @@
 			Name="Addins"
 			>
 			<File
-				RelativePath=".\About.cpp"
+				RelativePath=".\Addins\GenMopp.cpp"
 				>
-			</File>
-			<File
-				RelativePath=".\Chain.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\CullChildren.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\CullNodes.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\DumpBSplines.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\FixTextures.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\MergeFiles.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Nop.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\PrintNiNodes.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\SortNiNodes.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\StripNiNodes.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\UnparentNiNodes.cpp"
-				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						ObjectFile="$(IntDir)\$(InputName)1.obj"
+						XMLDocumentationFileName="$(IntDir)\$(InputName)1.xdc"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<Filter
@@ -385,20 +459,20 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\NifCmd.h"
+				RelativePath=".\Core\NifCmd.h"
 				>
 			</File>
 			<File
-				RelativePath=".\stdafx.h"
+				RelativePath=".\Core\nifutils.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Core\stdafx.h"
 				>
 			</File>
 		</Filter>
-		<Filter
-			Name="bspline"
-			>
-		</Filter>
 		<File
-			RelativePath=".\ReadMe.txt"
+			RelativePath=".\LICENSE.TXT"
 			>
 		</File>
 	</Files>
