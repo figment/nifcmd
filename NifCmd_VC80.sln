@@ -8,6 +8,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NifCmd", "NifCmd_VC80.vcpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Niflib", "..\..\..\niflib\niflib.vcproj", "{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NifMopp", "..\NifMopp\NifMopp.vcproj", "{97AD0704-9B55-4571-928D-AC4787D0FE5E}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -26,6 +28,10 @@ Global
 		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Debug|Win32.Build.0 = Debug - Static|Win32
 		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release|Win32.ActiveCfg = Release - Static|Win32
 		{19FD8EE6-79CC-4BAC-9744-D9573BE47C7E}.Release|Win32.Build.0 = Release - Static|Win32
+		{97AD0704-9B55-4571-928D-AC4787D0FE5E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97AD0704-9B55-4571-928D-AC4787D0FE5E}.Debug|Win32.Build.0 = Debug|Win32
+		{97AD0704-9B55-4571-928D-AC4787D0FE5E}.Release|Win32.ActiveCfg = Release|Win32
+		{97AD0704-9B55-4571-928D-AC4787D0FE5E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
