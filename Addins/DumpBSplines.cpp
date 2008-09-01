@@ -28,7 +28,7 @@ void DumpBSpline(NiBSplineCompTransformInterpolatorRef spline, string target)
 
    Ref<NiBSplineData > data = spline->GetSplineData();
    Ref<NiBSplineBasisData > basis = spline->GetBasisData();
-   int nctrl = basis->GetNumControlPt();
+   int nctrl = basis->GetNumControlPoints();
 
    cout.setf(ios::fixed, ios::floatfield);
    cout << setprecision(3); // << setiosflags(ios_base::showpos);
