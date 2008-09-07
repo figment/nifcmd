@@ -6,6 +6,7 @@
 #include "obj/NiTriShape.h"
 #include "obj/NiTriStrips.h"
 #include "obj/bhkRigidBody.h"
+#include "Inertia.h"
 
 using namespace std;
 
@@ -47,7 +48,7 @@ static void CalcRigidBodyProperties(vector<bhkRigidBodyRef>& items)
 			, I[1][0], I[1][1], I[1][2], I[1][3]
 			, I[2][0], I[2][1], I[2][2], I[2][3]
 		);
-		item->UpdateMassCenterInertia(1.0f, true, item->GetMass());
+		item->UpdateMassProperties(1.0f, true, item->GetMass());
 
 		mass = item->GetMass();
 		com = item->GetCenter();
@@ -139,6 +140,24 @@ static bool ExecuteCmd(NifCmdLine &cmdLine)
    {
       if (!IsSupportedVersion(outver))
          outver = ver;
+
+	  if ( HMODULE hNifHavok = LoadLibrary("NifMopp.dll") )
+	  {
+		  Inertia::SetCalcMassPropertiesBox( 
+			  (Inertia::fnCalcMassPropertiesBox)GetProcAddress(hNifHavok, "CalcMassPropertiesBox") );
+		  
+		  Inertia::SetCalcMassPropertiesSphere( 
+			  (Inertia::fnCalcMassPropertiesSphere)GetProcAddress(hNifHavok, "CalcMassPropertiesSphere") );
+		  
+		  Inertia::SetCalcMassPropertiesCapsule( 
+			  (Inertia::fnCalcMassPropertiesCapsule)GetProcAddress(hNifHavok, "CalcMassPropertiesCapsule") );
+		  
+		  Inertia::SetCalcMassPropertiesPolyhedron( 
+			  (Inertia::fnCalcMassPropertiesPolyhedron)GetProcAddress(hNifHavok, "CalcMassPropertiesPolyhedron") );
+
+		  Inertia::SetCombineMassProperties( 
+			  (Inertia::fnCombineMassProperties)GetProcAddress(hNifHavok, "CombineMassProperties") );
+	  }
 
       // Finally alter block tree
       vector<NiObjectRef> blocks = ReadNifList( current_file );
