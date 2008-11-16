@@ -340,7 +340,7 @@ NifCmdLine::NifCmdLine(int argc, char **argv, bool zeroargs)
       _makepath(path, drive, dir, fname, ext);
       outfile = path;
    }
-   DefaultToLatest();
+   //DefaultToLatest();
 }
 
 

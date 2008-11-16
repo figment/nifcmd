@@ -116,6 +116,7 @@ extern bool wildmatch(const stringlist& matches, const std::string& value);
 extern Niflib::NiNodeRef FindNodeByName( const vector<Niflib::NiNodeRef>& blocks, const string& name );
 extern std::vector<Niflib::NiNodeRef> SelectNodesByName( const vector<Niflib::NiNodeRef>& blocks, LPCTSTR match);
 extern int CountNodesByName( const vector<Niflib::NiNodeRef>& blocks, LPCTSTR match );
+extern int CountNodesByName( const vector<Niflib::NiNodeRef>& blocks, const string& match );
 extern std::vector<std::string> GetNamesOfNodes( const vector<Niflib::NiNodeRef>& blocks );
 extern std::vector<Niflib::NiNodeRef> SelectNodesByName( const vector<Niflib::NiNodeRef>& blocks, LPCTSTR match);
 
@@ -156,4 +157,31 @@ inline T ConvertTo(U value){
 template<typename T>
 inline Niflib::Ref<T> CreateNiObject() {
    return Niflib::StaticCast<T>(Ref<T>(new T()));
+}
+
+inline Niflib::Vector3 TOEULER(const Niflib::Matrix33 &m)
+{
+	Vector3 rv(0.0f, 0.0f, 0.0f);
+	if ( m[2][0] < 1.0 )
+	{
+		if ( m[2][0] > - 1.0 )
+		{
+			rv[2] = atan2( - m[1][0], m[0][0] );
+			rv[1] = asin( m[2][0] );
+			rv[0] = atan2( - m[2][1], m[2][2] );
+		}
+		else
+		{
+			rv[2] = - atan2( - m[1][2], m[1][1] );
+			rv[1] = - PI / 2;
+			rv[0] = 0.0;
+		}
+	}
+	else
+	{
+		rv[2] = atan2( m[1][2], m[1][1] );
+		rv[1] = PI / 2;
+		rv[0] = 0.0;
+	}
+	return rv;
 }

@@ -123,6 +123,10 @@ int CountNodesByName( const vector<NiNodeRef>& blocks, LPCTSTR match )
    return count;
 }
 
+int CountNodesByName( const vector<Niflib::NiNodeRef>& blocks, const string& match ) {
+	return CountNodesByName( blocks, match.c_str() );
+}
+
 // Get a vector of names from an NiNode vector
 vector<string> GetNamesOfNodes( const vector<Niflib::NiNodeRef>& nodes )
 {

@@ -70,13 +70,16 @@ static bool ExecuteCmd(NifCmdLine &cmdLine)
    else if ( ver == VER_INVALID ) cout << "invalid...";
    else 
    {
-      if (!IsSupportedVersion(outver))
-         outver = ver;
-
       // Finally alter block tree
-      vector<NiObjectRef> blocks = ReadNifList( current_file );
+		Niflib::NifInfo info;
+      vector<NiObjectRef> blocks = ReadNifList( current_file, &info );
+		if (IsSupportedVersion(outver)) {
+			info.version = cmdLine.outver;
+			info.userVersion = cmdLine.uoutver;
+			info.userVersion2 = 0;
+		}
       NiObjectRef root = blocks[0];
-      WriteNifTree(outfile, root, Niflib::NifInfo(cmdLine.outver, cmdLine.uoutver, cmdLine.uoutver));
+      WriteNifTree(outfile, root, info);
       return true;
    }
    return true;
