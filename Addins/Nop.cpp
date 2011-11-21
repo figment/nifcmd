@@ -72,7 +72,10 @@ static bool ExecuteCmd(NifCmdLine &cmdLine)
    {
       // Finally alter block tree
 		Niflib::NifInfo info;
-      vector<NiObjectRef> blocks = ReadNifList( current_file, &info );
+		Niflib::NifOptions opts;
+		opts.exceptionOnErrors = false;
+
+      vector<NiObjectRef> blocks = ReadNifList( current_file, &info, &opts );
 		if (IsSupportedVersion(outver)) {
 			info.version = cmdLine.outver;
 			info.userVersion = cmdLine.uoutver;
